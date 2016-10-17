@@ -12,8 +12,8 @@ typedef struct {
 
 /// Call to initialize the pid before sending a stream of feedbacks.
 void pid_start(Pid *pid);
-/// Call with the feedback from the sensor to produce a new output.
-double pid_output(Pid *pid, double feedback, double kp, double ki, double kd);
+/// Call with the error from the sensor to produce a new output.
+double pid_output(Pid *pid, double error, double kp, double ki, double kd);
 
 #endif // PID_H
 
